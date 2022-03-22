@@ -1,7 +1,7 @@
 // /*
-//  * @lc app=leetcode.cn id=100 lang=cpp
+//  * @lc app=leetcode.cn id=572 lang=cpp
 //  *
-//  * [100] 相同的树
+//  * [572] 另一棵树的子树
 //  */
 
 // // @lc code=start
@@ -17,6 +17,17 @@
 //  * };
 //  */
 
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// #include <set>
+// #include <map>
+// #include <unordered_map>
+// #include <unordered_set>
+// #include <stack>
+// #include <queue>
+// using namespace std;
+
 // struct TreeNode
 // {
 //     int val;
@@ -30,9 +41,14 @@
 // class Solution
 // {
 // public:
+//     bool isSubtree(TreeNode *root, TreeNode *subRoot)
+//     {
+//         return isSameTree(root, subRoot) || isSameTree(root->left, subRoot) || isSameTree(root->right, subRoot);
+//     }
+
 //     bool isSameTree(TreeNode *p, TreeNode *q)
 //     {
-//         if ((p == nullptr && q != nullptr) || (p != nullptr && q == nullptr))
+//         if ((p == nullptr && q != nullptr) || (q == nullptr && p != nullptr))
 //         {
 //             return false;
 //         }
@@ -42,14 +58,19 @@
 //             return true;
 //         }
 
-//         TreeNode* pp = p;
-//         TreeNode* qp = q;
+//         TreeNode *treeOne = p;
+//         TreeNode *treeTwo = q;
 
-//         if (pp->val !=  qp->val){
+//         if (treeOne->val != treeTwo->val)
+//         {
 //             return false;
 //         }
 
-//         return isSameTree(pp->left,qp->left) && isSameTree(pp->right,qp->right);
+//         return isSameTree(treeOne->left, treeTwo->left) && isSameTree(treeOne->right, treeTwo->left);
 //     }
 // };
+
+
 // // @lc code=end
+
+//TODO
