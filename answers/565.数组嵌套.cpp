@@ -28,13 +28,13 @@
 //         for (int i = 0; i < nums.size(); i++)
 //         {
 //             int start = nums[i], count = 0;
-//             while (visited[start] != -1)
+//             do
 //             {
 //                 int temp = start;
 //                 start = nums[start];
 //                 count++;
 //                 visited[start] = temp;
-//             }
+//             } while (visited[start] != -1);
 //             res = max(res, count);
 //         }
 //         return res;
@@ -43,4 +43,5 @@
 
 // // TODO
 // //听说还能优化，看看题解吧
+//记住这种思想,用数组记录访问
 // //  @lc code=end
