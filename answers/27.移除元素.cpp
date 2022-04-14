@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=5 lang=cpp
+ * @lc app=leetcode.cn id=27 lang=cpp
  *
- * [5] 最长回文子串
+ * [27] 移除元素
  */
 
 // @lc code=start
@@ -22,11 +22,13 @@
 #include <algorithm>
 using namespace std;
 
-
 class Solution {
 public:
-    string longestPalindrome(string s) {
-        //TODO
+    int removeElement(vector<int>& nums, int val) {
+        int slowIndex = 0;
+        for(int fastIndex = 0; fastIndex < nums.size(); fastIndex++){
+            //TODO
+        }
     }
 };
 // @lc code=end
